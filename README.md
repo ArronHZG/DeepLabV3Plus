@@ -3,6 +3,8 @@ backbone use resnet101,Xception
 
 refer to
 
+0.[BLSeg](https://github.com/linbo0518/BLSeg)
+
 1.[tensorflow-models](https://github.com/tensorflow/models/tree/master/research/deeplab
 
 2.[pytorch-deeplab-xception](https://github.com/jfzhang95/pytorch-deeplab-xception)

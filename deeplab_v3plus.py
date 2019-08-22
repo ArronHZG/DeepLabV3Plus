@@ -17,9 +17,11 @@ class DeepLab(nn.Module):
                                                         pretrained=pretrained)
 
         self.ASSP = ASSP(in_channels=2048, output_stride=output_stride)
+        
         self.decoder = Decoder(low_level_channels, num_classes)
 
-        if freeze_bn: self.freeze_bn()
+        if freeze_bn:
+            self.freeze_bn()
 
     def forward(self, x):
         H, W = x.size(2), x.size(3)
