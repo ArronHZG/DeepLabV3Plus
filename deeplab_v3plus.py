@@ -5,11 +5,10 @@ import torch.nn.functional as F
 
 from .models import getBackBone
 from .models.aspp import ASSP
-from .models.base_model import BaseModel
 from .models.decoder import Decoder
 
 
-class DeepLab(BaseModel):
+class DeepLab(nn.Module):
     def __init__(self, num_classes, in_channels=3, backbone='xception', pretrained=True,
                  output_stride=16, freeze_bn=False, **_):
         super(DeepLab, self).__init__()
