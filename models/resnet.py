@@ -1,7 +1,7 @@
 import torch.nn as nn
 
-import models.torchvision_resnet as torchvision_resnet
-from models.utils import initialize_weights
+from . import torchvision_resnet
+from .utils import initialize_weights
 
 
 class ResNet(nn.Module):
@@ -13,7 +13,7 @@ class ResNet(nn.Module):
             self.layer0 = nn.Sequential(
                 nn.Conv2d(in_channels, 64, 7, stride=2, padding=3, bias=False),
                 nn.BatchNorm2d(64),
-                nn.ReLU(inplace=True),
+                nn.LeakyReLU(inplace=True),
                 nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
             )
             initialize_weights(self.layer0)

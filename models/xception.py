@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils import model_zoo
 
-from models.utils import initialize_weights
+from .utils import initialize_weights
 
 ''' 
 -> (Aligned) Xception BackBone

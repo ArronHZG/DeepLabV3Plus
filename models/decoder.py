@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from models.utils import initialize_weights
+from .utils import initialize_weights
 
 
 class Decoder(nn.Module):
